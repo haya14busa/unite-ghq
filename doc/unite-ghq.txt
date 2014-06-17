@@ -1,0 +1,102 @@
+*unite-ghq.txt*	ghq source for unite.vim
+
+Author  : haya14busa <hayabusa1419@gmail.com>
+Version : 0.0.1
+License : MIT license {{{
+
+	Permission is hereby granted, free of charge, to any person obtaining
+	a copy of this software and associated documentation files (the
+	"Software"), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish,
+	distribute, sublicense, and/or sell copies of the Software, and to
+	permit persons to whom the Software is furnished to do so, subject to
+	the following conditions:
+	The above copyright notice and this permission notice shall be
+	included in all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+	CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+	TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+}}}
+
+CONTENTS				*unite-ghq-contents*
+
+	Introduction			|unite-ghq-introduction|
+	Dependencies			|unite-ghq-dependencies|
+	Install				|unite-ghq-install|
+	Usage				|unite-ghq-usage|
+	Known Issues			|unite-ghq-known-issues|
+	ChangeLog			|unite-ghq-changelog|
+
+==============================================================================
+INTRODUCTION					    *unite-ghq-introduction*
+
+	*unite-ghq* is a |unite| source for [ghq](https://github.com/motemen/ghq).
+	You can search the local repositories incrementally with unite
+	interface and easily jump into there.
+
+==============================================================================
+DEPENDENCIES					    *unite-ghq-dependencies*
+
+	Please install following command-line tools and plugins to use
+	unite-ghq.
+
+		- [motemen/ghq](https://github.com/motemen/ghq)
+		- [|unite|.vim](https://github.com/Shougo/unite.vim)
+
+==============================================================================
+INSTALL						    *unite-ghq-install*
+
+	Install with |NeoBundle|:
+
+		1. Add the following configuration to your vimrc.
+>
+		NeoBundle 'haya14busa/unite-ghq'
+<
+		2. Install with |:NeoBundleInstall|.
+
+	Install with |NeoBundleLazy|:
+
+		1. Add the following configuration sample to your vimrc.
+>
+		NeoBundleLazy 'haya14busa/unite-ghq', {
+		\   'autoload' : {
+		\     'unite_sources' : ['unite-ghq']
+		\   }
+		\ }
+<
+		2. Install with |:NeoBundleInstall|.
+
+
+==============================================================================
+USAGE							*unite-ghq-usage*
+
+	1. Open unite window with `|:Unite| ghq`
+	2. Select a target repository with incremental search
+	3. Now, you are already in the target repository!
+
+
+==============================================================================
+TODO							*unite-ghq-todo*
+
+	Issues
+	  https://github.com/haya14busa/unite-ghq/issues
+
+==============================================================================
+KNOWN ISSUES						*unite-ghq-issues*
+
+
+==============================================================================
+CHANGELOG						*unite-ghq-changelog*
+
+0.0.1	2014-06-18
+
+	- Init. It provide the unite source for jump-to-repository feature
+	  with `ghq list --full-path`
+
+vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:fdm=marker:
