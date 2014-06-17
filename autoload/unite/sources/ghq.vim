@@ -33,7 +33,6 @@ let s:source = {
             \ 'description' : 'Jump to local repositories under ghq management',
             \ 'type' : 'directory',
             \ }
-" NOTE:
 
 function! unite#sources#ghq#define()
     return executable('ghq') ? s:source : {}
@@ -47,19 +46,11 @@ function! s:source.gather_candidates(args, context)
         call add(candidates, {
         \   'word' : repo,
         \   'kind' : 'directory',
-        \   "action__directory": repo
+        \   'action__directory': repo
         \ })
     endfor
     return candidates
 endfunction
-
-" Helper
-function! s:error_msg(msg)
-    echohl ErrorMsg
-    echomsg 'unite-ghq: ' . a:msg
-    echohl None
-endfunction
-
 
 " Restore 'cpoptions' {{{
 let &cpo = s:save_cpo
